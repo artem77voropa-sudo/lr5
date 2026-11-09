@@ -8,8 +8,10 @@
 - API/client: http://localhost:5080; дозволений origin http://localhost:4173; недозволений http://localhost:4174. Це різні origins, але один site.
 - Development, БД securelab_lr05. Дані попередніх ЛР не очищувалися.
 - Робоча гілка lab/5-browser-xss; release lab-05-start-v1; base_commit 8daa3ca2da6061aac67a3ed5e97886c56d4df716 (v0.4.0). Receipt: `.scaffolds/lab-05.json`.
-- Код перевірений у робочому дереві. Коміти, v0.5.0 і публікацію виконує автор окремо; hashes не підмінено hashes базової ЛР4. Контрольні суми перевірених файлів наведено в `evidence/lr05/verified-files.json`.
-- Vulnerable snapshot містить scaffold із двома innerHTML та marker-коментар; fixed state — safe helper, CORS і CSP. Навчальний vulnerable snapshot запускається тільки локально.
+- Vulnerable commit: `36bc4fb467cf101162d348149e143635b6b91640` — scaffold із двома innerHTML та marker-коментар.
+- Fixed commit: `6cc3d66bb737bdddc8b4a961b044f709b1a1368c` — safe helper, CORS, CSP та результати перевірок. Контрольні суми перевірених файлів наведено в `evidence/lr05/verified-files.json`.
+- Репозиторій для передавання: [artem77voropa-sudo/lr5](https://github.com/artem77voropa-sudo/lr5). Завершальне оформлення: документаційний коміт → v0.5.0 → main → push гілок і тегу. Код лишається кодом зазначеного fixed commit; передавання перевіряється за віддаленими refs.
+- Навчальний vulnerable state запускається тільки локально. Обидва коміти створив автор роботи.
 
 ## Finding XSS-05-01
 
