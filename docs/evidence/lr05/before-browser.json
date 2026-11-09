@@ -1,0 +1,193 @@
+{
+  "stage": "before",
+  "checks": [
+    {
+      "name": "description-marker",
+      "incidentId": "96241c37-2a3a-4189-9be0-5e912493df45",
+      "storedAndReturnedExactly": true,
+      "dom": {
+        "text": "",
+        "elements": 1,
+        "images": 1
+      },
+      "markerExecuted": "executed"
+    },
+    {
+      "name": "comment-marker",
+      "parentId": "20000000-0000-0000-0000-000000000001",
+      "images": 1,
+      "markerExecuted": "executed"
+    },
+    {
+      "name": "authorization-bob",
+      "status": 404
+    },
+    {
+      "name": "authorization-morgan",
+      "status": 200
+    },
+    {
+      "name": "cors-4173-simple",
+      "readable": false,
+      "status": null,
+      "responses": [],
+      "network": [],
+      "networkResponseFacts": [
+        {
+          "status": 200,
+          "headers": {}
+        }
+      ],
+      "requestFacts": [
+        {
+          "method": "GET",
+          "url": "http://localhost:5080/health?probe=1794176394575",
+          "cookiePresent": false
+        }
+      ]
+    },
+    {
+      "name": "cors-4173-preflight",
+      "readable": false,
+      "status": null,
+      "responses": [],
+      "network": [
+        {
+          "methodHint": "Preflight",
+          "url": "http://localhost:5080/health?probe=1794176394826",
+          "status": 405,
+          "headers": {}
+        }
+      ],
+      "networkResponseFacts": [
+        {
+          "status": 405,
+          "headers": {}
+        }
+      ],
+      "requestFacts": [
+        {
+          "method": "GET",
+          "url": "http://localhost:5080/health?probe=1794176394826"
+        },
+        {
+          "method": "OPTIONS",
+          "url": "http://localhost:5080/health?probe=1794176394826",
+          "cookiePresent": false
+        }
+      ]
+    },
+    {
+      "name": "cors-4173-cookie",
+      "readable": false,
+      "status": null,
+      "responses": [],
+      "network": [],
+      "networkResponseFacts": [
+        {
+          "status": 200,
+          "headers": {}
+        }
+      ],
+      "requestFacts": [
+        {
+          "method": "GET",
+          "url": "http://localhost:5080/api/incidents?probe=1794176395043",
+          "cookiePresent": true
+        }
+      ]
+    },
+    {
+      "name": "cors-4174-simple",
+      "readable": false,
+      "status": null,
+      "responses": [],
+      "network": [
+        {
+          "methodHint": "Other",
+          "url": "http://localhost:4174/favicon.ico",
+          "status": 404,
+          "headers": {}
+        }
+      ],
+      "networkResponseFacts": [
+        {
+          "status": 404,
+          "headers": {}
+        },
+        {
+          "status": 200,
+          "headers": {}
+        }
+      ],
+      "requestFacts": [
+        {
+          "method": "GET",
+          "url": "http://localhost:5080/health?probe=1794176395459",
+          "cookiePresent": false
+        }
+      ]
+    },
+    {
+      "name": "cors-4174-preflight",
+      "readable": false,
+      "status": null,
+      "responses": [],
+      "network": [
+        {
+          "methodHint": "Preflight",
+          "url": "http://localhost:5080/health?probe=1794176395679",
+          "status": 405,
+          "headers": {}
+        }
+      ],
+      "networkResponseFacts": [
+        {
+          "status": 405,
+          "headers": {}
+        }
+      ],
+      "requestFacts": [
+        {
+          "method": "GET",
+          "url": "http://localhost:5080/health?probe=1794176395679"
+        },
+        {
+          "method": "OPTIONS",
+          "url": "http://localhost:5080/health?probe=1794176395679",
+          "cookiePresent": false
+        }
+      ]
+    },
+    {
+      "name": "cors-4174-cookie",
+      "readable": false,
+      "status": null,
+      "responses": [],
+      "network": [],
+      "networkResponseFacts": [
+        {
+          "status": 200,
+          "headers": {}
+        }
+      ],
+      "requestFacts": [
+        {
+          "method": "GET",
+          "url": "http://localhost:5080/api/incidents?probe=1794176395894",
+          "cookiePresent": true
+        }
+      ]
+    },
+    {
+      "name": "direct-http-disallowed-origin",
+      "status": 200,
+      "body": {
+        "status": "ready"
+      },
+      "allowOrigin": null
+    }
+  ],
+  "browser": "156.0.8078.80",
+  "createdFixturesCleaned": 1
+}

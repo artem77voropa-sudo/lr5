@@ -1,0 +1,9 @@
+{
+    "database":  "securelab_lr05",
+    "incidentId":  "4a3e076f-93d6-4976-b3e3-6f9e109b7aa0",
+    "descriptionDatabaseEqualsMarker":  true,
+    "descriptionApiEqualsMarker":  true,
+    "commentDatabaseEqualsMarker":  true,
+    "commentApiEqualsMarker":  true,
+    "createdFixtureCleaned":  true
+}

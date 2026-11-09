@@ -25,6 +25,16 @@ builder.Services.AddScoped<IncidentQueries>();
 
 builder.AddLab03Identity();
 
+// Temporary teaching origin; production uses the same-origin client.
+if (builder.Environment.IsDevelopment())
+{
+    builder.Services.AddCors(options => options.AddPolicy("Lab05BrowserProbe", policy =>
+        policy.WithOrigins("http://localhost:4173")
+            .WithMethods("GET")
+            .WithHeaders("X-Lab-Cors-Probe")
+            .AllowCredentials()));
+}
+
 var app = builder.Build();
 
 var resetRequested = args.Contains("--reset-database", StringComparer.Ordinal);
@@ -41,7 +51,14 @@ app.UseStatusCodePages();
 app.Use(async (context, next) =>
 {
     context.Response.Headers.XContentTypeOptions = "nosniff";
-    context.Response.Headers.Append("Referrer-Policy", "no-referrer");
+    context.Response.Headers["Referrer-Policy"] = "no-referrer";
+    // Scalar is a separate Development-only UI with its own resource requirements.
+    if (!(app.Environment.IsDevelopment() && context.Request.Path.StartsWithSegments("/scalar")))
+    {
+        context.Response.Headers["Content-Security-Policy"] =
+            "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; " +
+            "img-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'";
+    }
     await next(context);
 });
 
@@ -51,6 +68,8 @@ if (app.Environment.IsDevelopment())
     app.MapScalarApiReference();
 }
 
+app.UseRouting();
+if (app.Environment.IsDevelopment()) app.UseCors("Lab05BrowserProbe");
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseRateLimiter();

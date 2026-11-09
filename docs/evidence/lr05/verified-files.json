@@ -1,0 +1,17 @@
+{
+  "baseCommit": "8daa3ca2da6061aac67a3ed5e97886c56d4df716",
+  "state": "fixed working tree; source checksums, not commit hashes",
+  "files": {
+    ".scaffolds/lab-05.json": "ec4a20fda251d2cf3812ff0d946dcd87d2d1e1c7989a11aa426b9bdcd396b85e",
+    "demonstrations/cors-probe/index.html": "a4a7e4e0d0d70b018c6ce6b0c008a7e7800cf8af007a8942550a6482f39cbb42",
+    "demonstrations/cors-probe/probe.js": "2c718df73f41221544242b53d9a2b6b13dd56bb22588a955fb0df99673115357",
+    "src/SecureLab.Api/Program.cs": "4181c40b59b1d70641a63cfa356b6493a5c1d485698709d2da7ccf8d9b0dec51",
+    "src/SecureLab.Api/Data/DbSeeder.cs": "24e2d21a675c687cb23563f900189c722e73fe86aee8188db04d667ea908c32a",
+    "src/SecureLab.Api/Client/browser-lab.html": "f5614cec43cdf3c44f67401bdeb2fe304d641ac5b1f0a4d2bcb4c400db060cd9",
+    "src/SecureLab.Api/Client/browser-lab.js": "0d8ea3c80546d341acb390b95e301143be0b9c9696d8c69076df68355a23969a",
+    "src/SecureLab.Api/Client/safe-render.js": "90fbd6f35ab66fffd04b12b48c60d3fe175b91efd3d560d7e6fd0e3f48c9bfb7",
+    "tests/SecureLab.Api.Tests/BrowserSecurityTests.cs": "cc4bc922159480e2151690df1c53b77a30382220d98386c38eac69f56719ff58",
+    "tests/browser/lab05-browser-checks.py": "dae14a6bb3d43b3c3f9d70b2ef6ada83f9eed996f9049bf00f081f89da48065d",
+    "tests/browser/lab05-marker.txt": "7aba82ae72345b0cc9449d2ae0dbeffa0852c4aeca6746703b1a8b4d018400e6"
+  }
+}
